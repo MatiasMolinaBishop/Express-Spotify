@@ -1,0 +1,85 @@
+h1{
+    color: whitesmoke;
+}
+
+span{
+    color:rgb(100, 227, 100)
+}
+
+/* #bgImg{
+    background-image:url("/images/spotify-background.jpeg");
+    background-size:     cover;   
+    opacity: 0.5;    
+}  */
+
+body{
+    background-color: black;
+    text-align:center;
+}
+button{
+    background-color: rgb(196, 55, 55);
+    color: whitesmoke;
+    border: none;
+    border-radius: 0.2rem;
+    height: 40px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+#headerHome{
+    height: 50px;
+    margin: 120px 10px;
+}
+
+/* .lexOne{
+    display:flex;
+    flex-direction: row; /*default however writting it down to uderstan and possibly change*/
+    /* flex-wrap: wrap; /*default however writting it down to uderstan and possibly change*/
+    /* justify-content: center;
+    margin: 0;
+    padding:10px 300px 10px 300px;
+    gap:40px
+/* } */ 
+
+#searchStyle{
+    width: 500px;
+    height: 30PX;
+}
+
+#bgW{
+    background-color: whitesmoke;
+    opacity: 0.9;
+    padding: 100px 100px;
+    margin: 100px 300px;
+}
+
+a{
+    background-color: whitesmoke;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    height: 50px;
+    border-radius: 6px;
+    opacity: 0.9;
+    padding: 10px 10px;
+    
+   
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.imgSize{
+    width:500px;
+}
+
+.albumsCards >a{
+    font-size: 10px;
+}
+
+/* >a allows you to go insde the a elemnt within the div class */

@@ -1,0 +1,12 @@
+<div class ="grid">
+{{#each albumsKey}}
+<div class = 'albumsCards'>
+    <h1>{{{this.name}}}</h1>
+<img class="imgSize" src="{{this.images.0.url}}"> 
+{{!-- .0. is the same as [0] to access the array. .0. is used on handle bars --}}
+<br>
+<br>
+<a href="/tracks/{{this.id}}">Tracks</a>
+</div>
+{{/each}}
+</div>
