@@ -1,11 +1,12 @@
-
-{{#each tracksKey}}
-    <p>{{this.name}}</p>
-    <p>{{this.track_number}}</p>
-    <audio controls
-        src="{{this.preview_url}}", type="mp3">
-    </audio> 
-{{/each}}
-
-
-
+<div>
+    <h1 class="title-tracks-title">Listen to Tracks</h1>
+</div>
+<div class="tracks-grid">
+    {{#each tracksKey}}
+    <div class='card'>
+        <p class="title-track">{{this.name}}</p>
+        <audio class='audio-file' controls src="{{this.preview_url}}" , type="mp3">
+        </audio>
+    </div>
+    {{/each}}
+</div>

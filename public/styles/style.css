@@ -1,85 +1,301 @@
-h1{
-    color: whitesmoke;
-}
-
-span{
-    color:rgb(100, 227, 100)
-}
-
-/* #bgImg{
-    background-image:url("/images/spotify-background.jpeg");
-    background-size:     cover;   
-    opacity: 0.5;    
-}  */
-
-body{
-    background-color: black;
-    text-align:center;
-}
-button{
-    background-color: rgb(196, 55, 55);
-    color: whitesmoke;
-    border: none;
-    border-radius: 0.2rem;
-    height: 40px;
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    opacity: 0.9;
-    cursor: pointer;
-}
-
-#headerHome{
-    height: 50px;
-    margin: 120px 10px;
-}
-
-/* .lexOne{
-    display:flex;
-    flex-direction: row; /*default however writting it down to uderstan and possibly change*/
-    /* flex-wrap: wrap; /*default however writting it down to uderstan and possibly change*/
-    /* justify-content: center;
+* {
     margin: 0;
-    padding:10px 300px 10px 300px;
-    gap:40px
-/* } */ 
+    padding: 0;
+    box-sizing: border-box;
+}
 
-#searchStyle{
-    width: 500px;
+body {
+    background-color: whitesmoke;
+    text-align: center;
+    min-height: 100vh;
+    font-family: montserrat;
+}
+
+/* NAV BAR STYLES */
+.nav-bar {
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    flex-direction: row-reverse;
+    /* justify-content: space-between; */
+    gap: 20px;
+    padding: 20px 40px 20px 0;
+    background-color: rgb(215, 198, 198);
+}
+
+.navLink {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    font-size: 1rem;
+    display: block;
+    margin: 0;
+}
+
+/* Home page styles */
+
+.title {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    letter-spacing: 5px;
+    font-size: 2.2rem;
+}
+
+span {
+    color: rgb(23, 174, 188)
+}
+
+.landing-img {
+    width: 400px;
+}
+
+.search-flex {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 200px;
+    gap: 50px;
+}
+
+#searchStyle {
+    width: 300px;
     height: 30PX;
 }
 
-#bgW{
-    background-color: whitesmoke;
-    opacity: 0.9;
-    padding: 100px 100px;
-    margin: 100px 300px;
+.button {
+    cursor: pointer;
+    font-size: 1.2rem;
+    height: 2.3rem;
+    border: none;
+    color: #fff;
+    background-color: rgb(215, 198, 198);
+    outline: none;
+    padding: 0.5rem 1.8rem;
+    box-shadow: 0 0.1rem rgb(121, 121, 121, 0.35);
+    margin: 20px;
 }
 
-a{
+button:hover {
+    background-color: #fff;
+    color: black;
+}
+
+/* Artist / Albums styles  */
+
+.artist-name {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+}
+
+.artist-img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.view-albums {
     background-color: whitesmoke;
     cursor: pointer;
     text-decoration: none;
     color: black;
-    font-size: 30px;
-    height: 50px;
-    border-radius: 6px;
-    opacity: 0.9;
+    font-size: 1.2rem;
     padding: 10px 10px;
-    
-   
+    display: block;
 }
-.grid{
+
+.artists-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
 }
 
-.imgSize{
-    width:500px;
+/* TRACKS */
+
+.title-tracks-title {
+    margin-top: 100px;
+    margin-bottom: 10px;
+    letter-spacing: 5px;
+    font-size: 2.2rem;
+
 }
 
-.albumsCards >a{
-    font-size: 10px;
+.title-track {
+    margin-top: 25px;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+
 }
 
-/* >a allows you to go insde the a elemnt within the div class */
+.card {
+    margin: 50px auto;
+    padding: 20px;
+    /* box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem rgb(121, 121, 121, 0.7); */
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 12px;
+
+}
+
+.audio-file {
+    z-index: 99;
+
+}
+
+.tracks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Media Query for Tabets and phomes */
+
+@media (max-width:1100px) {
+    .title {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        letter-spacing: 4px;
+        font-size: 1.9rem;
+    }
+
+    .landing-img {
+        width: 300px;
+    }
+
+    .button {
+        cursor: pointer;
+        font-size: 0.9rem;
+        height: 2.1rem;
+        border: none;
+        color: #fff;
+        background-color: rgb(215, 198, 198);
+        outline: none;
+        padding: 0.4rem 1.4rem;
+        box-shadow: 0 0.1rem rgb(121, 121, 121, 0.35);
+        margin: 15px;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    .search-flex {
+        display: flex;
+        flex-direction: row;
+        margin: 10px 100px;
+        gap: 50px;
+    }
+
+    .artists-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tracks-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:850px) {
+    .title {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        letter-spacing: 3px;
+        font-size: 1.4rem;
+    }
+
+    .landing-img {
+        width: 220px;
+    }
+
+    .button {
+        cursor: pointer;
+        font-size: 0.8rem;
+        height: 2.0rem;
+        border: none;
+        color: #fff;
+        background-color: rgb(215, 198, 198);
+        outline: none;
+        padding: 0.4rem 1.4rem;
+        box-shadow: 0 0.1rem rgb(121, 121, 121, 0.35);
+        margin: 15px;
+    }
+
+    h2 {
+        font-size: 0.8rem;
+    }
+
+    .search-flex {
+        display: flex;
+        flex-direction: row;
+        margin: 8px 40px;
+        gap: 40px;
+    }
+
+    .artists-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .tracks-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #searchStyle {
+        width: 200px;
+        height: 30PX;
+    }
+}
+
+@media (max-width:550px) {
+    .title {
+        margin-top: 80px;
+        margin-bottom: 60px;
+        letter-spacing: 3px;
+        font-size: 1.4rem;
+    }
+
+    .landing-img {
+        width: 160px;
+    }
+
+    .button {
+        cursor: pointer;
+        font-size: 0.7rem;
+        height: 1.8rem;
+        border: none;
+        color: #fff;
+        background-color: rgb(215, 198, 198);
+        outline: none;
+        padding: 0.4rem 1.2rem;
+        box-shadow: 0 0.1rem rgb(121, 121, 121, 0.35);
+        margin: 12px;
+    }
+
+    h2 {
+        font-size: 0.7rem;
+        margin-top: 20px;
+    }
+
+    .search-flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 6px 50px;
+        gap: 30px;
+    }
+
+    .artists-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .tracks-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #searchStyle {
+        width: 140px;
+        height: 22PX;
+    }
+}

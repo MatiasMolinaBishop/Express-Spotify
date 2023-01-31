@@ -1,15 +1,17 @@
-<html id = bgImg>
-<h1 id="headerHome">SEARCH FAVORITE <span>ARTIST</span></h1>
-
-<div id ="bgW"> 
-<form action="/artist-search" method="GET">
-<label  for='artist'></label>
-<input id="searchStyle" type="text" name="artist">
-<br>
-<br>
-<br>
-<button type="submit">Search for an Artist</button>
-</form>
+<h1 class="title">SEARCH <span>ARTIST</span></h1>
+<div class="search-flex">
+    <img class='landing-img'
+        src="https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1773&q=80"
+        alt="records photo">
+    <div>
+        <form action="/artist-search" method="GET">
+            <label for='artist'></label>
+            <input id="searchStyle" type="text" name="artist">
+            <button class='button' type="submit">Search</button>
+        </form>
+        <h2>
+            This is the worlds largest album collection. Type in your favorite artist and discover their complete
+            discography
+        </h2>
+    </div>
 </div>
-</html>
- 
