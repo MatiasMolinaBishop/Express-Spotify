@@ -4,6 +4,8 @@
         src="https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1773&q=80"
         alt="records photo">
     <div>
+        {{!-- We use forms to get the users input and save it as a key value objetc under wahatver name we specify on
+        the <input />. Action and methos specified will pass this info to /artist-search as req.query --}}
         <form action="/artist-search" method="GET">
             <label for='artist'></label>
             <input id="searchStyle" type="text" name="artist">
@@ -15,3 +17,6 @@
         </h2>
     </div>
 </div>
+
+{{!-- Basically the form input will actr as an object with key values. The keys are specified as a attribute under name
+and the value whatver the user inputs --}}

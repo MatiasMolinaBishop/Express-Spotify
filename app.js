@@ -12,7 +12,7 @@ app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 
-// setting the spotify-api goes here:
+// setting the spotify-api:
 const spotifyApi = new SpotifyWebApi({
     clientId: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET
@@ -24,7 +24,7 @@ spotifyApi
     .then(data => spotifyApi.setAccessToken(data.body['access_token']))
     .catch(error => console.log('Something went wrong when retrieving an access token', error));
 
-// Our routes go here:
+// Our routes:
 
 app.get("/", (req, res) => {
     res.render("index")
@@ -56,7 +56,10 @@ app.get("/artist-search", async (req, res) => {//THIS IS THE SAME AS CREATING AS
     }
 })
 
-app.get("/albums/:artistId", async (req, res, next) => {
+//In our search result we inlcude a link see below which will redirect us to the route we create here
+//<a class='view-albums' href="/albums/{{this.id}}">View Albums</a>
+
+app.get("/albums/:artistId", async (req, res) => {
     //We pass in the id with router params :artistId
     try {
         const albumsInfo = await spotifyApi.getArtistAlbums(req.params.artistId)//:artistID works as the key pair for the id value
@@ -74,10 +77,13 @@ app.get("/albums/:artistId", async (req, res, next) => {
 
 })
 
+//<a class='view-albums' href="/tracks/{{this.id}}">Tracks</a>
+//On our album hbs file we add for each of the albums a link which directs the users to this rout ewe are creating now
+
 app.get("/tracks/:albumId", async (req, res, next) => {
     try {
         const tracks = await spotifyApi.getAlbumTracks(req.params.albumId)
-        console.log(tracks.body.items)
+        //console.log(tracks.body.items)
         const data = {
             tracksKey: tracks.body.items
         }
